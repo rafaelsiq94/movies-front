@@ -1,0 +1,73 @@
+.table-container {
+  font-family: "Inter", sans-serif;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+
+  table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  table tbody tr:nth-child(even) {
+    text-align: left;
+    background-color: #f2f2f2;
+  }
+
+  table tbody tr:hover {
+    text-align: left;
+    background-color: #ddd;
+  }
+
+  .pagination-container {
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #f2f2f2;
+  }
+
+  .pagination-container button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .pagination-container button:hover {
+    background-color: #ddd;
+  }
+
+  .pagination-container button:disabled {
+    color: #aaa;
+    cursor: not-allowed;
+  }
+
+  .pagination-container .active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+
+  input {
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 5px 10px;
+    width: 90%;
+  }
+
+  select {
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 5px 10px;
+    width: 90%;
+  }
+}

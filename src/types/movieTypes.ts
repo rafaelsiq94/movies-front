@@ -38,4 +38,34 @@ interface MoviePage {
   empty: boolean;
 }
 
-export type { Movie, Pageable, MoviePage };
+interface YearsWithMultipleWinners {
+  years: WinnerCountByYear[]
+}
+
+interface WinnerCountByYear {
+  year: number;
+  winnerCount: number;
+}
+
+interface StudiosWithWinCount {
+  studios: StudioWinCount[]
+}
+
+interface StudioWinCount {
+  name: string;
+  winCount: number;
+}
+
+interface MaxMinWinIntervalForProducers {
+  max: ProducerWinInterval[];
+  min: ProducerWinInterval[];
+}
+
+interface ProducerWinInterval {
+  producer: string;
+  interval: number;
+  previousWin: number;
+  followingWin: number;
+}
+
+export type { Movie, Pageable, MoviePage, YearsWithMultipleWinners, StudiosWithWinCount, MaxMinWinIntervalForProducers };

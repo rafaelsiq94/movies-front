@@ -1,23 +1,8 @@
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 import MovieList from './pages/MovieList';
 import './App.css';
-
-function Sidebar() {
-  return (
-    <div className="sidebar">
-      <ul>
-        <li>
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
-        <li>
-          <Link to="/movie-list">List</Link>
-        </li>
-      </ul>
-    </div>
-  );
-}
 
 function App() {
   return (
@@ -27,7 +12,16 @@ function App() {
           <h1>Frontend React Test</h1>
         </header>
         <div className="content">
-          <Sidebar />
+          <div className="sidebar">
+            <ul>
+              <li>
+                <Link to="/dashboard">Dashboard</Link>
+              </li>
+              <li>
+                <Link to="/movie-list">List</Link>
+              </li>
+            </ul>
+          </div>
           <main>
             <Routes>
               <Route path="/dashboard" element={<Dashboard />} />
