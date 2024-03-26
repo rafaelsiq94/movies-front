@@ -1,3 +1,4 @@
+import React from "react";
 import "./Table.css";
 
 interface Column {
@@ -19,7 +20,7 @@ interface Props {
   onFilterChange?: (filterKey: string, value: string | boolean | null) => void;
 }
 
-function Table(props: Readonly<Props>): JSX.Element {
+function Table(props: Readonly<Props>): React.JSX.Element {
   const { data, columns, page = 0, totalPages = 0, onPageChange, onFilterChange, filters } = props;
 
   return (

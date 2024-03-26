@@ -4,7 +4,7 @@ import {
   StudiosWithWinCount,
   MaxMinWinIntervalForProducers,
   Movie,
-} from "../types/movieTypes";
+} from "../types";
 
 const API_URL = "https://tools.texoit.com/backend-java/api/movies";
 

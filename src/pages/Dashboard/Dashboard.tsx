@@ -10,7 +10,7 @@ import {
   StudiosWithWinCount,
   MaxMinWinIntervalForProducers,
   Movie,
-} from "../../types/movieTypes";
+} from "../../types";
 import Table from "../../components/Table/Table";
 import "./Dashboard.css";
 
@@ -37,7 +37,7 @@ const winnerByYearColumns = [
   { name: "title", label: "Title" },
 ];
 
-function Dashboard() {
+function Dashboard(): React.JSX.Element {
   const [yearsWithMultipleWinners, setYearsWithMultipleWinners] = useState<YearsWithMultipleWinners>({ years: [] });
   const [studiosWithWinCount, setStudiosWithWinCount] = useState<StudiosWithWinCount>({ studios: [] });
   const [maxMinWinIntervalForProducers, setMaxMinWinIntervalForProducers] = useState<MaxMinWinIntervalForProducers>({ max: [], min: [] });
@@ -92,16 +92,16 @@ function Dashboard() {
         <Table data={studiosWithWinCount.studios.slice(0, 3)} columns={studiosWithWinCountColumns} />
       </div>
       <div className="grid-item">
-        <h2>Producers with longest and shortest interval between wins</h2>
-        <h3>Maximum</h3>
+        <h3>Producers with longest and shortest interval between wins</h3>
+        <h4>Maximum</h4>
         <Table data={maxMinWinIntervalForProducers.max} columns={maxMinWinIntervalForProducersColumns} />
-        <h3>Mininum</h3>
+        <h4>Mininum</h4>
         <Table data={maxMinWinIntervalForProducers.min} columns={maxMinWinIntervalForProducersColumns} />
       </div>
       <div className="grid-item">
         <h2>List movie winners by year</h2>
         <div className="search">
-          <input type="text" value={year} placeholder="Search by year" onChange={handleYearInputChange} />
+          <input type="number" value={year} placeholder="Search by year" onChange={handleYearInputChange} />
           <button onClick={handleChangeYear}>Search</button>
         </div>
         <Table data={winnerByYear} columns={winnerByYearColumns} />

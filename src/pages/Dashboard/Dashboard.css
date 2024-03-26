@@ -18,9 +18,20 @@
       margin-bottom: 10px;
 
       input {
-        width: 100%;
-        border-radius: 5px;
-        height: 25px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        padding: 5px 10px;
+        width: 90%;
+      }
+
+      button {
+        background-color: #007bff;
+        margin-left: 5px;
+        margin-top: 5px;
+        color: #fff;
+        height: 26px;
+        border: 0px;
       }
     }
   }

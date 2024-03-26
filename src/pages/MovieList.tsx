@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { fetchMovies } from "../services/movieService";
-import { Movie, MoviePage } from "../types/movieTypes";
+import { Movie, MoviePage } from "../types";
 import Table from "../components/Table/Table";
 
 const columns = [
@@ -11,7 +11,7 @@ const columns = [
   { name: "winner", label: "Winner?", filterKey: "winner", filterType: "boolean", type: "boolean"},
 ];
 
-function MovieList(): JSX.Element {
+function MovieList(): React.JSX.Element {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
