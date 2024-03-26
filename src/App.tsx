@@ -7,13 +7,12 @@ import './App.css';
 function Sidebar() {
   return (
     <div className="sidebar">
-      <h2>Sidebar</h2>
       <ul>
         <li>
           <Link to="/dashboard">Dashboard</Link>
         </li>
         <li>
-          <Link to="/movie-list">Movie List</Link>
+          <Link to="/movie-list">List</Link>
         </li>
       </ul>
     </div>
@@ -27,8 +26,8 @@ function App() {
         <header>
           <h1>Frontend React Test</h1>
         </header>
-        <Sidebar />
         <div className="content">
+          <Sidebar />
           <main>
             <Routes>
               <Route path="/dashboard" element={<Dashboard />} />

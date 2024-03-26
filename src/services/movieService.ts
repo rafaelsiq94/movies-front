@@ -4,15 +4,15 @@ const API_URL = "https://tools.texoit.com/backend-java/api/movies";
 
 const fetchMovies = async (
   page = 0,
-  size = 99,
-  winner = true,
-  year = 2018
+  size = 15,
+  winner?: boolean,
+  year?: string
 ): Promise<MoviePage> => {
   const url = new URL(API_URL);
   url.searchParams.append("page", page.toString());
   url.searchParams.append("size", size.toString());
-  url.searchParams.append("winner", winner.toString());
-  url.searchParams.append("year", year.toString());
+  url.searchParams.append("winner", (winner ?? "").toString());
+  url.searchParams.append("year", (year ?? ""));
 
   try {
     const response = await fetch(url.toString());

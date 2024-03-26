@@ -21,7 +21,7 @@ interface Pageable {
 }
 
 interface MoviePage {
-  content: Movie[];
+  content: Movie[] | [];
   pageable: Pageable;
   totalPages: number;
   totalElements: number;
