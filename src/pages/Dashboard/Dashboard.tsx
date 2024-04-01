@@ -16,7 +16,7 @@ import "./Dashboard.css";
 
 const yearsWithMultipleWinnersColumns = [
   { name: "year", label: "Year" },
-  { name: "winnerCount", label: "Winner Count" },
+  { name: "winnerCount", label: "Win Count" },
 ];
 
 const studiosWithWinCountColumns = [
